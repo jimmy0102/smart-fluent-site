@@ -190,6 +190,10 @@ body {
     animation: fadeIn 0.5s ease-out;
   }
   
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
   .hover-lift {
     @apply transition-transform duration-300 hover:-translate-y-1;
   }
@@ -304,5 +308,23 @@ body {
     content: '';
     @apply absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent;
     animation: shimmer 2s infinite;
+  }
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  to {
+    transform: translateX(100%);
   }
 }

@@ -16,6 +16,17 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [mobileMenuOpen]);
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white ${
       scrolled ? 'py-2 shadow-lg' : 'py-4 shadow-md'
@@ -89,11 +100,19 @@ const Header = () => {
         </div>
       </nav>
       
+      {/* Mobile Menu Backdrop */}
+      {mobileMenuOpen && (
+        <div 
+          className="md:hidden fixed inset-0 bg-black/20 z-30"
+          onClick={() => setMobileMenuOpen(false)}
+        />
+      )}
+      
       {/* Mobile Menu */}
-      <div className={`md:hidden fixed inset-x-0 top-full transition-all duration-500 ${
+      <div className={`md:hidden fixed inset-x-0 transition-all duration-500 z-40 ${
         mobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'
-      }`}>
-        <div className="bg-white border-t border-gray-200 shadow-lg">
+      }`} style={{ top: scrolled ? '60px' : '76px' }}>
+        <div className="bg-white border-t border-gray-200 shadow-lg min-h-screen">
           <div className="container mx-auto px-6 py-8">
             <div className="space-y-6">
               {[
