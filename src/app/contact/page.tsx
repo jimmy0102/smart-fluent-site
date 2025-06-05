@@ -73,30 +73,30 @@ export default function ContactPage() {
         <div className={`max-w-4xl mx-auto transition-all duration-1000 delay-500 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
-          {/* Contact Info Cards */}
+          {/* CTA Info Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             <div className="brand-card text-center group bg-white shadow-brand-soft">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-brand-orange to-brand-orange-light flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
-                📧
+                🚀
               </div>
-              <h3 className="text-lg font-semibold text-brand-gray-dark mb-2">Email</h3>
-              <p className="text-sm text-brand-gray">info@smartfluent.jp</p>
+              <h3 className="text-lg font-semibold text-brand-gray-dark mb-2">無料相談</h3>
+              <p className="text-sm text-brand-gray">AIの可能性を一緒に探してみませんか？まずはお気軽にご相談ください</p>
             </div>
             
             <div className="brand-card text-center group bg-white shadow-brand-soft">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-brand-orange-dark to-brand-orange flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
-                📍
+                ⚡
               </div>
-              <h3 className="text-lg font-semibold text-brand-gray-dark mb-2">Location</h3>
-              <p className="text-sm text-brand-gray">兵庫県伊丹市</p>
+              <h3 className="text-lg font-semibold text-brand-gray-dark mb-2">迅速対応</h3>
+              <p className="text-sm text-brand-gray">お問い合わせから24時間以内にご返信いたします</p>
             </div>
             
             <div className="brand-card text-center group bg-white shadow-brand-soft">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-brand-orange-light to-brand-orange flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
-                🕐
+                🎯
               </div>
-              <h3 className="text-lg font-semibold text-brand-gray-dark mb-2">営業時間</h3>
-              <p className="text-sm text-brand-gray">平日 9:00 - 18:00</p>
+              <h3 className="text-lg font-semibold text-brand-gray-dark mb-2">最適提案</h3>
+              <p className="text-sm text-brand-gray">お客様の課題に最適なAIソリューションをご提案します</p>
             </div>
           </div>
 
@@ -260,9 +260,6 @@ export default function ContactPage() {
                         )}
                       </span>
                     </button>
-                    <p className="text-xs text-brand-gray mt-3 text-center">
-                      ※ このフォームは現在デモ用です。実際の送信機能は実装されていません。
-                    </p>
                   </div>
                 </form>
               )}
