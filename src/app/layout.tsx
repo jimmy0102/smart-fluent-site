@@ -18,9 +18,9 @@ export const metadata: Metadata = {
   },
   description: "DXとAI技術を駆使して業務効率化・自動化を実現。BPO（Business Process Outsourcing）、AI活用支援、システム開発など幅広いサービスで、お客様が実務に集中できる環境づくりを全力で支援します。",
   keywords: ["BPO", "Business Process Outsourcing", "AI活用支援", "DX導入", "業務効率化", "自動化", "システム開発", "技術支援", "AI研修", "伴走型支援", "アウトソーシング"],
-  authors: [{ name: "Smart Fluent合同会社" }],
-  creator: "Smart Fluent合同会社",
-  publisher: "Smart Fluent合同会社",
+  authors: [{ name: "合同会社SMART FLUENT" }],
+  creator: "合同会社SMART FLUENT",
+  publisher: "合同会社SMART FLUENT",
   formatDetection: {
     email: false,
     address: false,

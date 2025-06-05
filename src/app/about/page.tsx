@@ -113,7 +113,7 @@ export default function AboutPage() {
                   <span className="text-lg font-semibold text-brand-orange-dark">会社名</span>
                 </div>
                 <div className="md:w-3/4 md:pl-6">
-                  <span className="text-xl font-medium text-brand-black">Smart Fluent合同会社</span>
+                  <span className="text-xl font-medium text-brand-black">合同会社SMART FLUENT</span>
                 </div>
               </div>
               
@@ -180,7 +180,7 @@ export default function AboutPage() {
                 </p>
                 <div className="brand-card rounded-xl p-4 inline-block bg-white border-brand-orange/20">
                   <p className="text-2xl font-bold brand-gradient-text mb-1">林 和樹</p>
-                  <p className="text-sm text-brand-gray">代表取締役</p>
+                  <p className="text-sm text-brand-gray">代表</p>
                 </div>
               </div>
             </div>
