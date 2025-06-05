@@ -55,6 +55,7 @@ const Footer = () => {
                 {[
                   { href: '/legal/privacy', label: 'プライバシーポリシー' },
                   { href: '/legal/terms', label: '利用規約' },
+                  { href: '/legal/tokutei', label: '特定商取引法に基づく表記' },
                 ].map((item) => (
                   <li key={item.href}>
                     <Link 
