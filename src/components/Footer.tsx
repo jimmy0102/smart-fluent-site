@@ -13,7 +13,7 @@ const Footer = () => {
             {/* Company Info */}
             <div className="space-y-4">
               <h3 className="text-xl font-bold brand-gradient-text">
-                Smart Fluent合同会社
+                合同会社SMART FLUENT
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed">
                 AIで実務に集中できる環境をつくる
@@ -75,7 +75,7 @@ const Footer = () => {
             <div className="absolute inset-x-0 top-0 h-px bg-gray-200" />
             <div className="pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               <p className="text-gray-600 text-sm">
-                &copy; {currentYear} Smart Fluent合同会社. All rights reserved.
+                &copy; {currentYear} 合同会社SMART FLUENT. All rights reserved.
               </p>
               <div className="flex items-center space-x-2">
                 <span className="text-gray-500 text-xs">Powered by</span>

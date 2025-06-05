@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "利用規約 | Smart Fluent - AIで実務に集中できる環境をつくる",
-  description: "Smart Fluent合同会社のサービス利用規約。AI活用支援、DX導入支援、システム開発等のサービスを安心してご利用いただくための規約です。",
+  description: "合同会社SMART FLUENTのサービス利用規約。AI活用支援、DX導入支援、システム開発等のサービスを安心してご利用いただくための規約です。",
   robots: "noindex, nofollow", // Generally recommended for legal pages
 };
 
@@ -13,7 +13,7 @@ export default function TermsOfServicePage() {
       <div className="max-w-3xl mx-auto bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md border border-gray-200 dark:border-gray-700 prose dark:prose-invert lg:prose-lg">
         {/* Placeholder Content */}
         <h2>第1条（適用）</h2>
-        <p>本規約は、Smart Fluent合同会社（以下、「当社」といいます。）が提供する一切のサービス（以下、「本サービス」といいます。）の利用条件を定めるものです。ユーザーの皆様（以下、「ユーザー」といいます。）には、本規約に従って本サービスをご利用いただきます。</p>
+        <p>本規約は、合同会社SMART FLUENT（以下、「当社」といいます。）が提供する一切のサービス（以下、「本サービス」といいます。）の利用条件を定めるものです。ユーザーの皆様（以下、「ユーザー」といいます。）には、本規約に従って本サービスをご利用いただきます。</p>
 
         <h2>第2条（定義）</h2>
         <p>（ここに本規約で使用する用語の定義を記載します。）</p>
