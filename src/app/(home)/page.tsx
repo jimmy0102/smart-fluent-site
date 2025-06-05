@@ -6,6 +6,8 @@ import { useEffect, useState, useRef } from 'react';
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
   const [typedText, setTypedText] = useState('');
+  const [showCursor, setShowCursor] = useState(true);
+  const [typingComplete, setTypingComplete] = useState(false);
   const fullText = 'AIで実務に集中できる環境をつくる';
   const heroRef = useRef<HTMLElement>(null);
 
@@ -20,6 +22,12 @@ export default function HomePage() {
         currentIndex++;
       } else {
         clearInterval(typingInterval);
+        setTypingComplete(true);
+        
+        // Hide cursor after 2-3 seconds when typing is complete
+        setTimeout(() => {
+          setShowCursor(false);
+        }, 2500);
       }
     }, 100);
 
@@ -29,7 +37,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section with Brand Theme */}
-      <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
+      <section ref={heroRef} className="relative h-screen flex items-center justify-center overflow-hidden bg-white pt-16 md:pt-20">
         {/* Subtle Background */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-b from-white via-brand-gray-light/30 to-white" />
@@ -47,7 +55,9 @@ export default function HomePage() {
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}>
               <span className="brand-gradient-text inline-block">{typedText}</span>
-              <span className="animate-pulse">|</span>
+              {showCursor && (
+                <span className={`${typingComplete ? '' : 'animate-pulse'}`}>|</span>
+              )}
             </h1>
             
             <p className={`text-lg md:text-xl text-brand-gray mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-500 ${
@@ -73,7 +83,7 @@ export default function HomePage() {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
           <div className="w-6 h-10 border-2 border-brand-orange/50 rounded-full flex justify-center">
             <div className="w-1 h-3 bg-brand-orange rounded-full mt-2 animate-pulse" />
           </div>
