@@ -43,7 +43,7 @@ const Header = () => {
             <div className="absolute -inset-2 bg-gradient-to-r from-orange-400 to-orange-600 opacity-0 group-hover:opacity-20 blur-lg transition-opacity duration-300" />
             <Image 
               src="/logo.png" 
-              alt="Smart Fluent Logo" 
+              alt="SMART FLUENT Logo" 
               width={180} 
               height={36} 
               priority 

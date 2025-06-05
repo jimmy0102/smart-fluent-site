@@ -13,8 +13,8 @@ const notoSansJP = Noto_Sans_JP({
 
 export const metadata: Metadata = {
   title: {
-    default: "Smart Fluent 合同会社 | AIで実務に集中できる環境をつくる",
-    template: "%s | Smart Fluent"
+    default: "SMART FLUENT 合同会社 | AIで実務に集中できる環境をつくる",
+    template: "%s | SMART FLUENT"
   },
   description: "DXとAI技術を駆使して業務効率化・自動化を実現。BPO（Business Process Outsourcing）、AI活用支援、システム開発など幅広いサービスで、お客様が実務に集中できる環境づくりを全力で支援します。",
   keywords: ["BPO", "Business Process Outsourcing", "AI活用支援", "DX導入", "業務効率化", "自動化", "システム開発", "技術支援", "AI研修", "伴走型支援", "アウトソーシング"],
@@ -27,16 +27,16 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: "Smart Fluent 合同会社 | AIで実務に集中できる環境をつくる",
+    title: "SMART FLUENT 合同会社 | AIで実務に集中できる環境をつくる",
     description: "BPO、AI活用支援、システム開発。DXとAI技術を駆使して業務効率化・自動化を実現。豊富な実績で全力伴走します。",
     url: "https://smartfluent.jp",
-    siteName: "Smart Fluent",
+    siteName: "SMART FLUENT",
     locale: "ja_JP",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Smart Fluent 合同会社 | AIで実務に集中できる環境をつくる",
+    title: "SMART FLUENT 合同会社 | AIで実務に集中できる環境をつくる",
     description: "BPO、AI活用支援、システム開発。DXとAI技術を駆使して業務効率化・自動化を実現。豊富な実績で全力伴走します。",
   },
   robots: {
