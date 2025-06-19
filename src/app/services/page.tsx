@@ -7,21 +7,24 @@ import { useEffect, useState } from 'react';
 const services = [
   {
     title: "DX事業",
-    description: "企業のデジタルトランスフォーメーションを総合的に支援。業務プロセスの分析から改善提案、システム導入、運用まで一貫してサポートし、真の意味での業務効率化を実現します。",
+    description: "スマフルが企業のデジタルトランスフォーメーションを伊丹市・尼崎市・宝塚市で総合的に支援。業務プロセスの分析から改善提案、システム導入、運用まで一貫してサポートし、真の意味での業務効率化を実現します。",
     details: "補助金活用可能",
     gradient: "from-brand-orange to-brand-orange-light",
+    link: "/services/dx-consulting"
   },
   {
-    title: "AIソリューション事業",
-    description: "AI技術を活用したカスタムソリューションの開発・導入。機械学習、自然言語処理、画像認識など、お客様の課題に最適なAI技術で業務自動化と効率化を推進します。",
+    title: "RPA導入支援",
+    description: "スマートフルエント（スマフル）がPower Automate等のRPAツールを活用した業務自動化を支援。繰り返し作業の自動化により、伊丹市・阪神間の中小企業の生産性向上を実現します。",
     details: "実績豊富",
     gradient: "from-brand-orange-dark to-brand-orange",
+    link: "/services/rpa-support"
   },
   {
-    title: "補助金申請支援",
-    description: "IT導入補助金、ものづくり補助金、事業再構築補助金など、各種補助金の申請から採択後のフォローまで専門的にサポート。コストを抑えた効果的なDX・AI導入を実現します。",
-    details: "高い採択実績",
+    title: "AI戦略コンサルティング",
+    description: "兵庫県でのAI導入・活用を支援。ChatGPT活用から機械学習まで、スマフルがお客様の業務課題に最適なAI技術で業務自動化と効率化を推進します。",
+    details: "AI活用支援",
     gradient: "from-brand-orange-light to-brand-orange",
+    link: "/services/ai-strategy"
   },
 ];
 
@@ -68,14 +71,15 @@ export default function ServicesPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {services.map((service, index) => (
-              <div
+              <Link
                 key={index}
-                className="group relative"
+                href={service.link}
+                className="group relative block"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-brand-orange/10 to-brand-orange-light/10 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
-                <div className="relative brand-card h-full flex flex-col bg-white shadow-brand-soft">
+                <div className="relative brand-card h-full flex flex-col bg-white shadow-brand-soft hover:shadow-brand-glow transition-all duration-300">
                   {service.details && (
                     <div className="mb-4">
                       <span className="text-xs text-brand-orange font-mono bg-brand-orange/10 px-2 py-1 rounded">
@@ -92,9 +96,16 @@ export default function ServicesPage() {
                     {service.description}
                   </p>
                   
-                  <div className="mt-6 h-0.5 w-0 group-hover:w-full bg-gradient-to-r from-brand-orange to-brand-orange-light transition-all duration-500" />
+                  <div className="mt-6 flex items-center text-brand-orange font-medium">
+                    <span>詳しく見る</span>
+                    <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </div>
+                  
+                  <div className="mt-4 h-0.5 w-0 group-hover:w-full bg-gradient-to-r from-brand-orange to-brand-orange-light transition-all duration-500" />
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

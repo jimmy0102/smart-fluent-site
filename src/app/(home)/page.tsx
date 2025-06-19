@@ -11,6 +11,61 @@ export default function HomePage() {
   const fullText = 'AIで実務に集中できる環境をつくる';
   const heroRef = useRef<HTMLElement>(null);
 
+  const faqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "スマートフルエント（スマフル）のサービス対応エリアはどこですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "主に伊丹市・尼崎市・宝塚市・西宮市を中心とした阪神間エリアでサービスを提供しています。その他の兵庫県内や関西圏についてもご相談ください。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "DX導入に補助金は活用できますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "IT導入補助金、ものづくり補助金、事業再構築補助金など、様々な補助金の活用をサポートしています。お客様の状況に応じて最適な補助金をご提案し、申請から採択後のフォローまで一貫してサポートします。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "中小企業でもAI・RPA導入は可能ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、可能です。スマフルでは中小企業様の規模や予算に応じたAI・RPA導入を支援しています。小規模から始められるソリューションもご用意しており、段階的な導入も可能です。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "導入後のサポート体制はどうなっていますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "スマートフルエントでは「伴走型支援」を掲げており、導入後も継続的にサポートします。運用支援、改善提案、追加機能開発など、お客様が安心してシステムを活用できる体制を整えています。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "無料相談では何ができますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "現在の業務課題のヒアリング、DX・AI・RPA導入の可能性診断、概算費用のご提示、補助金活用の可能性などについて無料でご相談いただけます。まずはお気軽にお問い合わせください。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "スマフルの強みは何ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "豊富な業務効率化・技術支援の実績、伴走型の支援スタイル、補助金活用による低コスト導入、地域密着型のサービスが主な強みです。単なるシステム導入ではなく、お客様の業務改善を真剣に考えてサポートします。"
+        }
+      }
+    ]
+  };
+
   useEffect(() => {
     setIsVisible(true);
     
@@ -36,6 +91,13 @@ export default function HomePage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqStructuredData),
+        }}
+      />
+      
       {/* Hero Section with Brand Theme */}
       <section ref={heroRef} className="relative h-screen flex items-center justify-center overflow-hidden bg-white pt-16 md:pt-20">
         {/* Subtle Background */}
@@ -63,9 +125,9 @@ export default function HomePage() {
             <p className={`text-lg md:text-xl text-brand-gray mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-500 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}>
-              業務効率化と自動化のプロフェッショナルとして、
-              DXとAI技術を駆使してお客様の業務課題を解決。
-              実績を最大限に活かし、全力で伴走しながら
+              スマートフルエント（スマフル）は伊丹市・尼崎市・宝塚市を中心とした阪神間で、
+              中小企業のDX・AI・RPA導入を支援。業務効率化と自動化のプロフェッショナルとして、
+              豊富な実績を最大限に活かし、全力で伴走しながら
               実務に集中できる環境づくりを支援します。
             </p>
             
@@ -160,6 +222,49 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-24 relative bg-white">
+        <div className="container mx-auto px-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+            <span className="brand-gradient-text">よくあるご質問</span>
+          </h2>
+          
+          <div className="max-w-4xl mx-auto space-y-6">
+            {[
+              {
+                question: "スマートフルエント（スマフル）のサービス対応エリアはどこですか？",
+                answer: "主に伊丹市・尼崎市・宝塚市・西宮市を中心とした阪神間エリアでサービスを提供しています。その他の兵庫県内や関西圏についてもご相談ください。"
+              },
+              {
+                question: "DX導入に補助金は活用できますか？",
+                answer: "IT導入補助金、ものづくり補助金、事業再構築補助金など、様々な補助金の活用をサポートしています。お客様の状況に応じて最適な補助金をご提案し、申請から採択後のフォローまで一貫してサポートします。"
+              },
+              {
+                question: "中小企業でもAI・RPA導入は可能ですか？",
+                answer: "はい、可能です。スマフルでは中小企業様の規模や予算に応じたAI・RPA導入を支援しています。小規模から始められるソリューションもご用意しており、段階的な導入も可能です。"
+              },
+              {
+                question: "導入後のサポート体制はどうなっていますか？",
+                answer: "スマートフルエントでは「伴走型支援」を掲げており、導入後も継続的にサポートします。運用支援、改善提案、追加機能開発など、お客様が安心してシステムを活用できる体制を整えています。"
+              },
+              {
+                question: "無料相談では何ができますか？",
+                answer: "現在の業務課題のヒアリング、DX・AI・RPA導入の可能性診断、概算費用のご提示、補助金活用の可能性などについて無料でご相談いただけます。まずはお気軽にお問い合わせください。"
+              },
+              {
+                question: "スマフルの強みは何ですか？",
+                answer: "豊富な業務効率化・技術支援の実績、伴走型の支援スタイル、補助金活用による低コスト導入、地域密着型のサービスが主な強みです。単なるシステム導入ではなく、お客様の業務改善を真剣に考えてサポートします。"
+              }
+            ].map((faq, index) => (
+              <div key={index} className="brand-card rounded-xl p-6 bg-white shadow-brand-soft">
+                <h3 className="text-lg font-bold mb-3 text-brand-black">{faq.question}</h3>
+                <p className="text-brand-gray leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-24 relative overflow-hidden bg-gradient-to-br from-brand-orange/10 to-brand-orange-light/10">
         <div className="absolute inset-0">
@@ -173,15 +278,15 @@ export default function HomePage() {
           </h2>
           
           <p className="text-xl text-brand-gray mb-12 max-w-2xl mx-auto">
-            業務効率化、AI導入、システム開発など、
-            どんな課題でも全力で伴走します。
+            伊丹市・尼崎市・宝塚市でDX・AI・RPA導入をお考えの中小企業様、
+            スマフルが全力で伴走します。
           </p>
           
           <Link 
             href="/contact" 
             className="brand-button inline-flex items-center space-x-3 text-lg px-8 py-4 shadow-brand-hover hover:shadow-brand-glow-lg"
           >
-            <span>無料相談はこちら</span>
+            <span>無料DX診断はこちら</span>
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>

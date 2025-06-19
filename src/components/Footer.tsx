@@ -13,14 +13,17 @@ const Footer = () => {
             {/* Company Info */}
             <div className="space-y-4">
               <h3 className="text-xl font-bold brand-gradient-text">
-                合同会社SMART FLUENT
+                スマートフルエント（SMART FLUENT合同会社）
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                AIで実務に集中できる環境をつくる
+                伊丹市でAI・RPA・DXコンサルを提供するスマフル
               </p>
               <p className="text-gray-600 text-sm flex items-center space-x-2">
                 <span className="w-2 h-2 bg-[#ff8c00] rounded-full" />
-                <span>兵庫県伊丹市西台3丁目9番22号</span>
+                <span>〒664-0842 兵庫県伊丹市西台3丁目9番22号 西台駅前ビル208-17</span>
+              </p>
+              <p className="text-gray-600 text-sm">
+                対応エリア：伊丹市・尼崎市・宝塚市・西宮市・阪神間
               </p>
             </div>
 
@@ -76,11 +79,11 @@ const Footer = () => {
             <div className="absolute inset-x-0 top-0 h-px bg-gray-200" />
             <div className="pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               <p className="text-gray-600 text-sm">
-                &copy; {currentYear} 合同会社SMART FLUENT. All rights reserved.
+                &copy; {currentYear} SMART FLUENT合同会社（スマートフルエント・スマフル）. All rights reserved.
               </p>
               <div className="flex items-center space-x-2">
-                <span className="text-gray-500 text-xs">Powered by</span>
-                <span className="brand-gradient-text font-mono text-sm font-semibold">AI</span>
+                <span className="text-gray-500 text-xs">伊丹でDX・AI・RPA支援</span>
+                <span className="brand-gradient-text font-mono text-sm font-semibold">スマフル</span>
               </div>
             </div>
           </div>

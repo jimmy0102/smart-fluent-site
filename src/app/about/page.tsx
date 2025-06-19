@@ -44,7 +44,8 @@ export default function AboutPage() {
           <p className={`text-xl md:text-2xl text-brand-gray max-w-3xl mx-auto transition-all duration-1000 delay-300 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}>
-            DXとAIで、企業が実務に集中できる環境を創造する
+            スマートフルエント（スマフル）は伊丹市・阪神間で、<br />
+            中小企業のDX・AI導入により実務に集中できる環境を創造する
           </p>
         </div>
       </section>
@@ -113,7 +114,7 @@ export default function AboutPage() {
                   <span className="text-lg font-semibold text-brand-orange-dark">会社名</span>
                 </div>
                 <div className="md:w-3/4 md:pl-6">
-                  <span className="text-xl font-medium text-brand-black">合同会社SMART FLUENT</span>
+                  <span className="text-xl font-medium text-brand-black">SMART FLUENT合同会社（スマートフルエント・スマフル）</span>
                 </div>
               </div>
               
